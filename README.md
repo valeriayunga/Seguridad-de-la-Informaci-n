@@ -1,3 +1,18 @@
+##  Implementación de Requisitos de Seguridad (RS)
+
+El sistema fue diseñado para cumplir y demostrar la implementación de **7 requisitos de seguridad **, relacionados con el ciclo de vida, acceso y monitoreo de usuarios.
+
+
+| ID  | Requisito de Seguridad                                                                                 |
+|-----|-------------------------------------------------------------------------------------------------------|
+| RS1 | El registro de nuevos usuarios debe incluir validación. El sistema debe proporcionar el usuario y la contraseña. |
+| RS2 | El control de ingreso (login) debe realizarse mediante un segundo factor de autenticación (2FA). Se optó por un código de verificación (simulado al correo). |
+| RS3 | Se debe monitorear la creación de usuarios y registrar todos los accesos al sistema.                 |
+| RS4 | El sistema debe permitir recuperar el usuario o contraseña en base al correo electrónico.            |
+| RS5 | Un usuario puede ser dado de baja temporalmente y reactivado. No se debe permitir más de una sesión activa al mismo tiempo. |
+| RS6 | El número de accesos fallidos debe ser controlado (máximo 4 intentos). Se debe registrar cada intento. |
+| RS7 | El sistema debe controlar la gestión de sesión de trabajo.    
+
 # Arquitectura del Proyecto
 El proyecto está organizado en una arquitectura de capas:
 
@@ -10,7 +25,6 @@ AppAuth/
 │   └── ... (otros servicios para tokens, sesiones, admin)
 ├── app.py                 <-- CAPA DE PRESENTACIÓN (Interfaz Streamlit)
 └── auth_practica.db       <-- CAPA DE DATOS (Se crea automáticamente al iniciar)
-# Guía de Configuración y Ejecución
 ```
 ---
 
@@ -29,8 +43,21 @@ git clone https://github.com/valeriayunga/Seguridad-de-la-Informaci-n.git
 # Entrar al directorio del proyecto (ajusta el nombre si es diferente en tu máquina)
 cd Seguridad-de-la-Informaci-n
 ```
+### Paso 2: Crear Entorno Virtual
 
-### Paso 2: Instalación de Dependencias
+Crea y activa un entorno virtual para aislar las dependencias del proyecto.
+#### En Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+#### En macOS / Linux:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+```
+### Paso 3: Instalación de Dependencias
 
 Ejecuta el siguiente comando para instalar todas las librerías necesarias de Python:
 
@@ -38,7 +65,7 @@ Ejecuta el siguiente comando para instalar todas las librerías necesarias de Py
   pip install streamlit streamlit-option-menu sqlalchemy bcrypt
 ```
 
-### Paso 3: Ejecución de la Aplicación
+### Paso 4: Ejecución de la Aplicación
 
 Inicia la aplicación Streamlit. La primera vez que se ejecute, se creará automáticamente la base de datos auth_practica.db.
 
