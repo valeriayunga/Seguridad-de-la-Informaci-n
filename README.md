@@ -49,5 +49,5 @@ La aplicación se abrirá en tu navegador web por defecto, usualmente en:
 ```bash
 # http://localhost:8501
 ```
-La interfaz presenta un menú de navegación lateral a la izquierda y el área de contenido principal a la derecha. El menú permite al usuario alternar entre las funcionalidades esenciales de seguridad, como el Login, Registro, Activación de Cuenta y Recuperación de Contraseña.
+La interfaz presenta un menú de navegación lateral a la izquierda y el área de contenido principal a la derecha. El menú permite al usuario alternar entre las funcionalidades de seguridad, como el Login, Registro, Activación de Cuenta y Recuperación de Contraseña.
 <img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/706523c4-a8ee-48e8-8054-96b94457d67a" />
